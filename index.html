@@ -1,0 +1,66 @@
+<!--Idea and style by Shimon//-->
+<!--Javascript by Jakub-->
+
+<!DOCTYPE html>
+<html>
+<title>Generátor Hlášek</title>
+<head>
+<style>
+h1{
+  color: white;
+  font-family: monospace;
+  align-items: center;
+}
+body {
+font-size: 70px;
+text-align: center;
+background-color: #2d2d2d;
+font-family: monospace;
+color: #FFFFFF
+
+}
+a.button{
+  display:inline-block;
+  padding:0.3em 1.2em;
+  margin:0 0.3em 0.3em 0;
+  border-radius:2em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family: monospace;
+  font-weight:300;
+  color:#000000;
+  background-color:#4eb5f1;
+  text-align:center;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+  a.button:hover{
+    background-color:#4095c6;
+}
+  @media all and (max-width:30em){
+    a.button{
+      display:block;
+      margin:0.2em auto;
+}
+}
+</style>
+<head>
+<body>
+
+<h1>Generátor Hlášek</h1>
+<p id="hlaska"></p>
+
+<form>
+  <a type="button" onclick="msg()" class = "button">Generuj hlášku</a>
+</form>
+
+<script>
+function msg() {
+	const hlasky = ["Dostaneš banán", "Dobrý, co?", "Výtečně", "Je to to samý!", "hmm", "Pro lamy", "Inteligentní poznámka"];
+	const random = Math.floor(Math.random() * hlasky.length);
+	document.getElementById("hlaska").innerHTML = (random, hlasky[random]);
+}
+</script>
+
+</body>
+</html>
