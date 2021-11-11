@@ -56,10 +56,17 @@ a.button{
 
 <script>
 const hlasky = ["Dostaneš banán", "Dobrý, co?", "Výtečně", "Je to to samý!", "hmm", "Pro lamy", "Inteligentní poznámka"];
+var lastIndex = -1;
+
 function msg() {
-	const random = Math.floor(Math.random() * hlasky.length);
-	document.getElementById("hlaska").innerHTML = (random, hlasky[random]);
+	var index = Math.floor(Math.random() * hlasky.length);
+	if (index == lastIndex) {
+		index = (index + 1) % hlasky.length;
+	}
+	document.getElementById("hlaska").innerHTML = hlasky[index];
+	lastIndex = index;
 }
+
 </script>
 
 </body>
