@@ -55,8 +55,8 @@ a.button{
 </form>
 
 <script>
+const hlasky = ["Dostaneš banán", "Dobrý, co?", "Výtečně", "Je to to samý!", "hmm", "Pro lamy", "Inteligentní poznámka"];
 function msg() {
-	const hlasky = ["Dostaneš banán", "Dobrý, co?", "Výtečně", "Je to to samý!", "hmm", "Pro lamy", "Inteligentní poznámka"];
 	const random = Math.floor(Math.random() * hlasky.length);
 	document.getElementById("hlaska").innerHTML = (random, hlasky[random]);
 }
